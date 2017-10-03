@@ -1,0 +1,137 @@
+/* THE 12 GRID TEMPLATE CSS SETTINGS DECLARED HERE */
+*{box-sizing: border-box;}
+
+body{
+    margin: 0;
+    background-color: #000;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+[class*="col-"]{
+    float: left;
+    border: 1px dashed grey
+}
+.row::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+/* THE ORIGINAL STYLING STARTS FROM HERE */
+
+/* THE SIDE NAVIGATION BAR */
+a{
+    text-decoration: none;
+    color: inherit;
+}
+#fixedNav nav{
+    position: fixed;
+    height: 100%;
+    background-color: #000;
+    z-index: 20;
+}
+#fixedNav ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+#fixedNav ul li i{
+    display: block;
+    font-size: 50px;
+    padding: 5px 0;
+}
+#fixedNav ul li{
+    color: #fff;
+    padding: 15px 10px;
+    text-align: center;
+    font-family: "Varela Round";
+    transition: .1s;
+}
+#fixedNav ul a:nth-child(2) li{
+    background-color: #828282;
+}
+#fixedNav ul li:hover{
+    background-color: #00bbff !important;
+    color: #000;
+}
+
+/* THE SIDE PROFILE WINDOW */
+
+#sideProfile{
+    width: 0;
+    margin-left: 86px;
+    position: absolute;
+    height: 100%;
+    padding:15px 0;
+    background-color: #232323;
+    box-shadow: 0 0 10px #444444;
+    z-index: 10;
+    overflow: hidden;
+    transition: .5s;
+    transition-timing-function: ease-out;
+    /*GENERAL FONT SETS*/
+    color: #fff;
+    font-family: raleway;
+}
+#sideProfile img{
+    width: 150px;
+    border: 2px solid #fff;
+    display: block;
+    margin: auto;
+}
+#sideProfile h1{
+    font-weight: 500;
+    margin: 10px 0;
+    font-size: 30px;
+    text-align: center;
+}
+#sideProfile h2{
+    font-size: 14px;
+    color: #cccccc;
+    margin:0;
+    text-align: center;
+}
+#sideProfileAbout{
+    margin-top: 50px;
+}
+#sideProfileAbout p{
+    font-size: 12px;
+    margin: 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #6d6d6d;
+}
+/* THE MAIN CONTENT OF THE PAGE */
+#main{
+    margin-left: 86px;
+    color: #fff
+}
+.jumbotron{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.jumbotron h1{
+    font-family: "varela round";
+    font-size: 10vw;
+    text-align: center;
+    margin: 0;
+    text-shadow: 0.4vw 0.4vw 0px #006299;
+    color: #66c9ff;
+}
+.jumbotron h1 span{
+    color: #44ff60;
+    text-shadow: 0.4vw 0.4vw 0 #00590c;
+}
