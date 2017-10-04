@@ -21,7 +21,7 @@ body{
 
 [class*="col-"]{
     float: left;
-    /*border: 1px dashed grey*/
+    border: 1px dashed grey
 }
 .row::after{
     content: "";
@@ -61,7 +61,7 @@ a{
 }
 #fixedNav ul a{
     color: #fff;
-    padding: 3vh 5px;
+    padding: 20px 5px;
     text-align: center;
     font-family: "Varela Round";
     transition: background-color .1s;
@@ -405,6 +405,15 @@ a{
     100%{transform: translateY(0px)}
 }
 /* MEDIA QUERIES */
-@media screen and (max-width=100px){
-    
+@media screen and (max-width: 400px){
+    #fixedNav ul a{
+        padding: 15px 5px;
+        font-size: 13px;
+    }
+    #fixedNav ul a i{
+        font-size: 40px;
+    }
+    #main{
+        margin-left: 62px;
+    }
 }
