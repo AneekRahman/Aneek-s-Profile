@@ -21,7 +21,7 @@ body{
 
 [class*="col-"]{
     float: left;
-    border: 1px dashed grey
+    /*border: 1px dashed grey*/
 }
 .row::after{
     content: "";
@@ -43,7 +43,6 @@ a{
     overflow: hidden;
     animation-name: navBarFade;
     animation-duration: .5s;
-    width:80px;
 }
 #fixedNav nav:hover li{
     animation-name: navBarAnim;
@@ -62,12 +61,12 @@ a{
 }
 #fixedNav ul a{
     color: #fff;
-    padding: 15px 5px;
+    padding: 3vh 5px;
     text-align: center;
     font-family: "Varela Round";
     transition: background-color .1s;
     cursor: pointer;
-    display: block
+    display: block;
 }
 #fixedNav ul a:nth-child(1){
     text-shadow: 0 0 150px #fff;
@@ -87,7 +86,7 @@ a{
 
 #sideProfile{
     width: 0;
-    margin-left: 80px;
+    margin-left: 76px;
     position: fixed;
     height: 100%;
     padding:15px 0;
@@ -130,7 +129,7 @@ a{
 }
 /* THE MAIN CONTENT OF THE PAGE */
 #main{
-    margin-left: 79px;
+    margin-left: 75px;
     color: #fff
 }
 
@@ -190,6 +189,10 @@ a{
     padding: 10px 20px;
     margin: 0 1vw;
     font-family: "varela round";
+    display: inline-block;
+    animation-name: pretty;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
 }
 
 
@@ -200,11 +203,11 @@ a{
 }
 #howWork h1{
     text-align: center;
-    padding: 60px;
+    padding: 4vw;
     margin: 0;
     font-family: raleway;
     font-size: 4vw;
-    font-weight: 100;
+    font-weight: 900;
     animation-name: workh1;
     animation-duration: 60s;
     animation-iteration-count: infinite;
@@ -329,6 +332,11 @@ a{
 
 
 /*KEYFRAMES*/
+@keyframes pretty{
+    0%{opacity: 0}
+    50%{opacity: 1}
+    100%{opacity: 0}
+}
 @keyframes navBarFade{
     from{width: 0}
     to{width: 80px}
@@ -395,4 +403,8 @@ a{
     0   {transform: translateY(0px)}
     50% {transform: translateY(-5px)}
     100%{transform: translateY(0px)}
+}
+/* MEDIA QUERIES */
+@media screen and (max-width=100px){
+    
 }
