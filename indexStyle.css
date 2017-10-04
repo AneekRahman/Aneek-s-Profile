@@ -58,7 +58,7 @@ a{
 #fixedNav ul i{
     display: block;
     font-size: 50px;
-    padding: 5px 0;
+    padding: .5vh 0;
 }
 #fixedNav ul a{
     color: #fff;
@@ -212,7 +212,7 @@ a{
     text-transform: uppercase;
 }
 #howWork ol{
-    padding: 0 10vw 7vw;
+    padding: 0 3vw 7vw;
     list-style-position: inside;
     margin: 0;
 }
@@ -222,7 +222,7 @@ a{
     background-color: rgba(0,0,0,.05);
     font-family: "varela round";
     border-bottom: 1px solid rgba(255,255,255,.3);
-    font-size: 1.4vw;
+    font-size: 13px;
     overflow: hidden;
     color: #000;
     text-align: center;
