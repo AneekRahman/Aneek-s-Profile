@@ -84,9 +84,11 @@ a{
 
 /* THE SIDE PROFILE WINDOW */
 
+.sideProfileWrapper{
+    margin-left: 76px;
+}
 #sideProfile{
     width: 0;
-    margin-left: 76px;
     position: fixed;
     height: 100%;
     padding:15px 0;
@@ -99,6 +101,17 @@ a{
     /*GENERAL FONT SETS*/
     color: #fff;
     font-family: raleway;
+}
+#sideProfile::before{
+    content: "";
+    border: 10px solid;
+    border-color: transparent transparent transparent #24c0ff;
+    font-size: 0;
+    position: fixed;
+    top: 43px;
+    left: 91px;
+    transform: scaleY(5.3) scaleX(2.5);
+    display:block
 }
 #sideProfile img{
     width: 150px;
@@ -167,10 +180,6 @@ a{
 /* THE PRETTY SECTION */
 .pretty{
     background-color: #ffee00;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 40px;
     border-left: 10px solid #18ce00;
 }
 .pretty p{
@@ -200,6 +209,7 @@ a{
 #howWork{
     background-color: #fff;
     height: auto;
+    overflow: hidden;
 }
 #howWork h1{
     text-align: center;
@@ -220,12 +230,12 @@ a{
     margin: 0;
 }
 #howWork ol li{
-    padding: 25px 7vw;
+    padding: 20px 10px;
     margin: 5px 0;
     background-color: rgba(0,0,0,.05);
     font-family: "varela round";
     border-bottom: 1px solid rgba(255,255,255,.3);
-    font-size: 13px;
+    font-size: 20px;
     overflow: hidden;
     color: #000;
     text-align: center;
@@ -277,6 +287,7 @@ a{
     border: 10px solid #006eff;
     cursor: pointer;
     opacity: .7;
+    text-align: center;
 }
 .langWrap p{
     margin: auto;
@@ -329,6 +340,11 @@ a{
     opacity: 1;
 }
 
+/* THE FOOTER */
+.footer{
+    margin-left: 75px;
+}
+
 
 
 /*KEYFRAMES*/
@@ -339,7 +355,11 @@ a{
 }
 @keyframes navBarFade{
     from{width: 0}
-    to{width: 80px}
+    to{width: 76px}
+}
+@keyframes navBarFadeSmall{
+    from{width: 0}
+    to{width: 63px}
 }
 @keyframes navBarAnim{
     0{transform: rotateY(0)translateY(0);}
@@ -415,5 +435,13 @@ a{
     }
     #main{
         margin-left: 62px;
+    }
+    #fixedNav nav{
+        animation-name: navBarFadeSmall;
+    }
+}
+@media screen and (max-width: 350px){
+    .pretty{
+        padding: 10px
     }
 }
