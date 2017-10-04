@@ -248,7 +248,7 @@ a{
 .langWrap p{
     margin: auto;
     font-family: "varela round";
-    font-size: 3vw;
+    font-size: 40px;
 }
 /*KEYFRAMES*/
 @keyframes navBarFade{
