@@ -220,7 +220,6 @@ a{
 
 #langs{
     background-color: #dbf2ff;
-    color: #000;
 }
 #langs h1{
     margin: auto;
@@ -237,18 +236,22 @@ a{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
 }
 .langWrap{
     background-color: #fff;
     width: 300px;
-    height: 150px;
+    height: 180px;
     margin: 10px;
     display: flex;
+    box-shadow: 0 3px 10px #bcbcbc;
+    border: 10px solid #7ce0ff;
 }
 .langWrap p{
     margin: auto;
     font-family: "varela round";
     font-size: 40px;
+    color: #383838;
 }
 /*KEYFRAMES*/
 @keyframes navBarFade{
