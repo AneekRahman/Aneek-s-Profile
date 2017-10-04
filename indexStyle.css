@@ -56,17 +56,18 @@ a{
 }
 #fixedNav ul i{
     display: block;
-    font-size: 50px;
+    font-size: 40px;
     padding: .5vh 0;
 }
 #fixedNav ul a{
     color: #fff;
-    padding: 20px 5px;
+    padding: 15px 5px;
     text-align: center;
     font-family: "Varela Round";
     transition: background-color .1s;
     cursor: pointer;
     display: block;
+    font-size: 13px;
 }
 #fixedNav ul a:nth-child(1){
     text-shadow: 0 0 150px #fff;
@@ -84,11 +85,9 @@ a{
 
 /* THE SIDE PROFILE WINDOW */
 
-.sideProfileWrapper{
-    margin-left: 76px;
-}
 #sideProfile{
     width: 0;
+    margin-left: 63px;
     position: fixed;
     height: 100%;
     padding:15px 0;
@@ -102,19 +101,8 @@ a{
     color: #fff;
     font-family: raleway;
 }
-#sideProfile::before{
-    content: "";
-    border: 10px solid;
-    border-color: transparent transparent transparent #24c0ff;
-    font-size: 0;
-    position: fixed;
-    top: 43px;
-    left: 91px;
-    transform: scaleY(5.3) scaleX(2.5);
-    display:block
-}
 #sideProfile img{
-    width: 150px;
+    width: 120px;
     border: 2px solid #fff;
     display: block;
     margin: auto;
@@ -122,7 +110,7 @@ a{
 #sideProfile h1{
     font-weight: 500;
     margin: 10px 0;
-    font-size: 30px;
+    font-size: 20px;
     text-align: center;
 }
 #sideProfile h2{
@@ -135,17 +123,16 @@ a{
     margin-top: 50px;
 }
 #sideProfileAbout p{
-    font-size: 12px;
+    font-size: 10px;
     margin: 0;
     padding: 10px 0;
     border-bottom: 1px solid #6d6d6d;
 }
 /* THE MAIN CONTENT OF THE PAGE */
 #main{
-    margin-left: 75px;
+    margin-left: 62px;
     color: #fff
 }
-
 /*THE JUMBOTRON*/
 .jumbotron{
     display: flex;
@@ -355,10 +342,6 @@ a{
 }
 @keyframes navBarFade{
     from{width: 0}
-    to{width: 76px}
-}
-@keyframes navBarFadeSmall{
-    from{width: 0}
     to{width: 63px}
 }
 @keyframes navBarAnim{
@@ -426,18 +409,8 @@ a{
 }
 /* MEDIA QUERIES */
 @media screen and (max-width: 400px){
-    #fixedNav ul a{
-        padding: 15px 5px;
-        font-size: 13px;
-    }
-    #fixedNav ul a i{
-        font-size: 40px;
-    }
     #main{
         margin-left: 62px;
-    }
-    #fixedNav nav{
-        animation-name: navBarFadeSmall;
     }
 }
 @media screen and (max-width: 350px){
