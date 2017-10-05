@@ -21,7 +21,7 @@ body{
 
 [class*="col-"]{
     float: left;
-    border: 1px dashed grey
+    /*border: 1px dashed grey*/
 }
 .row::after{
     content: "";
@@ -57,7 +57,7 @@ a{
 #fixedNav ul i{
     display: block;
     font-size: 40px;
-    padding: .5vh 0;
+    padding: 3px 0;
 }
 #fixedNav ul a{
     color: #fff;
@@ -104,29 +104,54 @@ a{
 #sideProfile img{
     width: 120px;
     border: 2px solid #fff;
-    display: block;
     margin: auto;
+    border-radius: 100%;
+    box-sizing: content-box;
+    display: block;
+}
+#borFade{
+    border: 0 solid #fff;
+    animation-name: borderAnim;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    box-sizing: content-box;
+    position: absolute;
+    border-radius: 100%;
+    width: 120px;
+    height: 120px;
+    top: 21px;
+    left: 60px;
 }
 #sideProfile h1{
     font-weight: 500;
-    margin: 10px 0;
+    margin: 20px 0 10px;
     font-size: 20px;
     text-align: center;
+    white-space: nowrap;
 }
 #sideProfile h2{
     font-size: 14px;
     color: #cccccc;
     margin:0;
     text-align: center;
+    white-space: nowrap;
 }
 #sideProfileAbout{
     margin-top: 50px;
+    white-space: nowrap;
 }
 #sideProfileAbout p{
     font-size: 10px;
     margin: 0;
     padding: 10px 0;
     border-bottom: 1px solid #6d6d6d;
+}
+#sideProfileAbout span{
+    color: #9bc1ff
+}
+#sideProfile a{
+    font-size: 12px;
+    color: #ffffa3;
 }
 /* THE MAIN CONTENT OF THE PAGE */
 #main{
@@ -263,6 +288,7 @@ a{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    padding-bottom: 40px;
 }
 .langWrap{
     background-color: #fff;
@@ -328,13 +354,26 @@ a{
 }
 
 /* THE FOOTER */
-.footer{
-    margin-left: 75px;
+footer{
+    margin-left: 63px;
+}
+.copyR h1{
+    margin: 0;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    font-family: "varela round", sans-serif;
+    padding: 20px 0;
 }
 
 
 
 /*KEYFRAMES*/
+@keyframes borderAnim{
+    0%{border-width: 0;transform: translate(0,0);opacity: 0}
+    50%{border-width: 15px;transform: translate(-16px,-14px);opacity: .2}
+    100%{border-width: 15px;transform: translate(-16px,-14px);opacity: 0}
+}
 @keyframes pretty{
     0%{opacity: 0}
     50%{opacity: 1}
@@ -416,5 +455,10 @@ a{
 @media screen and (max-width: 350px){
     .pretty{
         padding: 10px
+    }
+}
+@media only screen and (max-height:450px){
+    #fixedNav nav{
+        display: none;
     }
 }
