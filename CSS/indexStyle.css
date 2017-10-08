@@ -49,17 +49,17 @@ a{
     animation-duration: .5s;
     animation-timing-function: ease-in-out;
 }
-#fixedNav ul{
+#fixedNav ul,#overlayCont ul{
     padding: 0;
     margin: 0;
     list-style: none;
 }
-#fixedNav ul i{
+#fixedNav ul i,#overlayCont ul i{
     display: block;
     font-size: 40px;
     padding: 3px 0;
 }
-#fixedNav ul a{
+#fixedNav ul a,#overlayCont ul a{
     color: #fff;
     padding: 15px 5px;
     text-align: center;
@@ -75,10 +75,10 @@ a{
     animation-duration: 1s;
     animation-iteration-count: infinite;
 }
-#fixedNav ul a:nth-child(2){
+#fixedNav ul a:nth-child(2),#overlayCont ul a:nth-child(2){
     background-color:#c600b3;
 }
-#fixedNav ul a:hover{
+#fixedNav ul a:hover,#overlayCont ul a:hover{
     background-color: #00bbff !important;
     color: #000;
 }
@@ -219,17 +219,17 @@ a{
 
 /*THE WORKFLOW PATTERN SECTION*/
 #howWork{
-    background-color: #fff;
+    background-color: #f9fcff;
     height: auto;
     overflow: hidden;
 }
 #howWork h1{
     text-align: center;
-    padding: 4vw;
+    padding: 30px 10px;
     margin: 0;
     font-family: raleway;
-    font-size: 4vw;
-    font-weight: 900;
+    font-size: 50px;
+    font-weight: 500;
     animation-name: workh1;
     animation-duration: 60s;
     animation-iteration-count: infinite;
@@ -275,9 +275,9 @@ a{
 #langs h1{
     margin: auto;
     font-family: raleway;
-    font-size: 4vw;
-    font-weight: 100;
-    padding: 70px 20px;
+    font-size: 50px;
+    font-weight: 500;
+    padding: 40px 10px;
     text-transform: uppercase;
     color: #006dad;
     text-shadow: 0 0 1px;
@@ -344,8 +344,56 @@ footer{
     padding: 20px 0;
 }
 
-
-
+/* THE OVERLAY */
+#overlayBack{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 100;
+    height: 0;
+    overflow: hidden;
+    transition: .5s;
+}
+#overlayCont{
+    overflow: hidden;
+    display: none;
+}
+#overlayClose{
+    color: #fff;
+    position: fixed;
+    top: 3vh;
+    right: 3vh;
+    z-index: 200;
+    font-size: 8vh;
+    display: none;
+}
+#overlayOpen{
+    position: fixed;
+    top:0;
+    font-size: 40px;
+    z-index: 200;
+    color: #fff;
+    margin: 15px;
+    text-shadow: 0 0 2px #000;
+    display: none;
+}
+#overlayCont{
+    position: fixed;
+    z-index: 200;
+    top: 15%;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,0.6);
+}
+#overlayCont ul a{
+    padding: 2.5vh;
+    font-size: 2vh
+}
+#overlayCont ul i{
+    font-size: 5vh
+}
 /*KEYFRAMES*/
 @keyframes borderAnim{
     0%{border-width: 0;transform: translate(0,0);opacity: 0}
@@ -413,18 +461,17 @@ footer{
     100%{transform: translateY(0px)}
 }
 /* MEDIA QUERIES */
-@media screen and (max-width: 400px){
-    #main{
-        margin-left: 62px;
-    }
-}
-@media screen and (max-width: 350px){
-    .pretty{
-        padding: 10px
-    }
-}
-@media only screen and (max-height:450px){
+@media screen and (max-height:450px), (max-width:450px){
     #fixedNav nav{
         display: none;
+    }
+    #overlayOpen{
+        display: block;
+    }
+    #main{
+        margin-left: 0;
+    }
+    footer{
+        margin-left: 0;
     }
 }

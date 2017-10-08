@@ -3,7 +3,7 @@
 
 body{
     margin: 0;
-    background-color: #efefef;
+    background-color: #d8e7ff;
 }
 
 .col-1 {width: 8.33%;}
@@ -158,7 +158,7 @@ a{
 #header{
     margin-left: 63px;
     background-color: #2e404f;
-    padding: 10px 10px 13px;
+    padding: 20px 10px 23px;
     box-shadow: 0 0 9px #364959;
 }
 #header h1 span{
@@ -190,26 +190,27 @@ a{
 .photoWrapper{
     flex-direction: row;
     display: flex;
-    border: 1px solid rgba(0,0,0,.2);
+    border: 1px solid #7aa6ff;
     width: 900px;
     margin:15px auto;
-    box-shadow: 0 2px 7px #b7b7b7;
+    box-shadow: 0 2px 7px #7aa6ff;
     height: auto;
 }
 .imgHolder{
     width: 60%;
     height: auto;
+    max-height: 500px;
+    overflow: hidden;
 }
 .imgHolder img{
     width: 100%;
     display: block;
-    height: 100%;
 }
 .sideBox{
     width: 40%;
     border-left: 1px solid rgba(0,0,0,.2);
     padding: 15px 20px 0;
-    background-color: #fff;
+    background-color: #f9fbff;
 }
 .sideBox h1{
     margin: 0;
