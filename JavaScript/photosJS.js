@@ -18,7 +18,7 @@ function hideShowSide(){
         case 1:
             sideProfileSelect.style.width='0';
             sideProfileSelect.style.padding='20px 0';
-            profilebtnSelect.style.backgroundColor="#000";
+            profilebtnSelect.style.backgroundColor="#233442";
             proStyleSelect.innerHTML='#sideProfile::before{display:none}';
             document.getElementById('borFade').style.display='none';
             profileTrigger=0;

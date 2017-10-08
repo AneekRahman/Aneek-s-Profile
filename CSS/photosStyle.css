@@ -21,7 +21,7 @@ body{
 
 [class*="col-"]{
     float: left;
-    border: 1px dashed grey;
+
 }
 .row::after{
     content: "";
@@ -38,7 +38,7 @@ a{
 #fixedNav nav{
     position: fixed;
     height: 100%;
-    background-color: #000;
+    background-color: #233442;
     z-index: 20;
     overflow: hidden;
     animation-name: navBarFade;
@@ -80,7 +80,7 @@ a{
 }
 #fixedNav ul a:hover{
     background-color: #00bbff !important;
-    color: #000;
+    color: #083359;
 }
 
 /* THE SIDE PROFILE WINDOW */
@@ -153,6 +153,30 @@ a{
     font-size: 12px;
     color: #ffffa3;
 }
+
+/* THE HEADER */
+#header{
+    margin-left: 63px;
+    background-color: #2e404f;
+    padding: 10px 10px 13px;
+    box-shadow: 0 0 9px #364959;
+}
+#header h1 span{
+    font-size: 14px;
+    margin: 0 5px 0 0;
+    color: #84b3ff;
+    text-shadow: 1px 1px #004887;
+}
+#header h1{
+    margin: 0;
+    text-align: center;
+    font-family: raleway;
+    color: #fff;
+    font-size: 40px;
+    font-weight: 500;
+    color: #f9ff93;
+    text-shadow: 1.5px 1.5px #8c8e00;
+}
 /* THE MAIN CONTENT OF THE PAGE */
 
 #main{
@@ -161,31 +185,31 @@ a{
 .photoMain{
     display: flex;
     flex-direction: column;
-    padding: 20px 5px
+    padding: 20px 5px;
 }
 .photoWrapper{
+    flex-direction: row;
     display: flex;
     border: 1px solid rgba(0,0,0,.2);
-    border-radius: 5px;
     width: 900px;
     margin:15px auto;
-    box-shadow: 0 2px 7px #b7b7b7
+    box-shadow: 0 2px 7px #b7b7b7;
+    height: auto;
+}
+.imgHolder{
+    width: 60%;
+    height: auto;
 }
 .imgHolder img{
-    width: 500px;
+    width: 100%;
     display: block;
-    margin: auto;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    margin: auto;
+    height: 100%;
 }
 .sideBox{
-    width: 100%;
+    width: 40%;
     border-left: 1px solid rgba(0,0,0,.2);
     padding: 15px 20px 0;
     background-color: #fff;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
 }
 .sideBox h1{
     margin: 0;
@@ -194,6 +218,10 @@ a{
     color: #000;
     font-weight: 400;
     height: 80px;
+    text-overflow: ellipsis;
+}
+.respondBox{
+    height: calc(100% - 140px)
 }
 .respondBox ul{
     padding: 0;
@@ -218,7 +246,7 @@ a{
     border: 1px solid #ccc;
     padding: 10px;
     margin: 10px 0;
-    height: 120px;
+    height: 100%;
 }
 .commentBox input{
     font-family:"varela round",sans-serif;
@@ -234,6 +262,23 @@ a{
     width: 100%;
     border-color: #0065ff;
 }
+
+
+/* THE FOOTER */
+footer{
+    margin-left: 63px;
+    background-color: #233442;
+}
+.copyR h1{
+    margin: 0;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    font-family: "varela round", sans-serif;
+    padding: 20px 0;
+}
+
+
 /*THE KEYFRAMES*/
 @keyframes borderAnim{
     0%{border-width: 0;transform: translate(0,0);opacity: 0}
@@ -255,4 +300,51 @@ a{
     0%{text-shadow: 0 0 300px #fff;}
     50%{text-shadow: 0 0 100px #fff;}
     100%{text-shadow: 0 0 300px #fff;}
+}
+/* THE MEDIA QUERIES */
+@media only screen and (max-width:1000px){
+    .photoWrapper{
+        width: calc(98vw - 63px);
+    }
+    header span{
+        font-size: 60% !important;
+    }
+    header h1{
+        font-size: 150% !important
+    }
+}
+@media only screen and (max-width:690px){
+    .photoWrapper{
+        flex-direction: column;
+        width: calc(98vw - 63px)
+    }
+    .photoWrapper .imgHolder{
+        width: auto;
+    }
+    .photoWrapper .imgHolder img{
+        width: 100% !important;
+    }
+    .photoWrapper .sideBox{
+        width:100%;
+        height: 170px;
+        padding: 14px 10px
+    }
+    .sideBox h1{
+        font-size: 14px;
+        height: auto;
+        padding: 5px 0
+    }
+    .respondBox li{
+        padding:  5px 14px !important;
+        font-size: 8px !important
+    }
+    .commentBox{
+        height: 90px;
+    }
+    header span{
+        font-size: 70% !important;
+    }
+    header h1{
+        font-size: 100% !important
+    }
 }
