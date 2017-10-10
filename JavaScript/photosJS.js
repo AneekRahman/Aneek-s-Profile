@@ -25,3 +25,29 @@ function hideShowSide(){
             break;
     }
 }
+
+// OVERLAY SCRIPTINGS HERE
+var ovClose=document.getElementById('overlayClose');
+var ovOpen=document.getElementById('overlayOpen');
+var ovCont=document.getElementById('overlayCont');
+var ovBack=document.getElementById('overlayBack');
+var body=document.getElementsByTagName('body')[0];
+
+function ovHide(){
+    ovCont.style.display="none";
+    ovBack.style.height="0";
+    ovClose.style.display="none";
+    body.style.overflow="auto";
+    ovOpen.style.display="block";
+}
+function ovShow(){
+    ovCont.style.display="block";
+    ovBack.style.height="100%";
+    ovClose.style.display="block";
+    body.style.overflow="hidden";
+    ovOpen.style.display="none";
+}
+
+ovClose.onclick=ovHide;
+ovOpen.onclick=ovShow;
+ovBack.onclick=ovHide;
