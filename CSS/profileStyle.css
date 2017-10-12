@@ -3,6 +3,7 @@
 
 body{
     margin: 0;
+    background-color: #000;
 }
 
 .col-1 {width: 8.33%;}
@@ -20,7 +21,6 @@ body{
 
 [class*="col-"]{
     float: left;
-    border: 1px dashed grey;
 }
 .row::after{
     content: "";
@@ -234,18 +234,124 @@ a{
 #main{
     margin-left: 63px;
 }
-
-
-
-
-
-
+.backSlideShow{
+    display: flex;
+    height: 200px;
+    filter: brightness(.5);
+}
+.backSlideShow img{
+    width: 250px;
+    display: block;
+    animation-name: slideShow;
+    animation-duration: 100s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    border-right: 20px solid #fff;
+    border-left: 20px solid #fff;
+}
+@keyframes slideShow{
+    0%{transform: translateX(0)}
+    100%{transform: translateX(-1000%)}
+}
+#profileIcon{
+    width: 180px;
+    height: 180px;
+    margin-right: 20px;
+    float: right;
+    transform: translateY(0);
+    margin-top: -100px;
+    overflow: hidden;
+    border: 4px solid #fff;
+    box-shadow: 0 3px 10px #212121;
+}
+#profileIcon img{
+    width: 180px;
+    height: 180px;
+    display: block;
+    transition: .4s;
+}
+.proMainOver{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: rgba(0,0,0,0.8);
+    transition: .3s;
+    display: flex;
+    overflow: hidden;
+}
+.proMainOver p{
+    margin: auto;
+    line-height: 0;
+    font-family: "varela round";
+    color: #fff;
+}
+#profileIcon:hover .proMainOver{
+    height: 25%;
+}
+#iconHead{
+    float: right;
+    margin: 25px 20px 0 0;
+    font-family: raleway;
+}
+#iconHead h1{
+    margin: 0;
+    color: #fff;
+    text-align: right;
+    font-weight: 500;
+    font-size: 23px;
+}
+#iconHead h2{
+    margin: 5px 0 0;
+    text-align: right;
+    color: #dddddd;
+    font-weight: 100;
+    font-size: 20px;
+}
+.contNav{
+    margin-top: 32px;
+    border-bottom: 1px solid #232323;
+    padding-left: 20px
+}
+.contNav ul{
+    list-style: none;
+    padding: 0;
+    margin: 0 0 10px;
+}
+.contNav p{
+    display: inline-block;
+    color: #fff;
+    font-family: "raleway";
+    padding: 5px 0;
+    font-weight: 100;
+    font-size: 13px
+}
+.contNav li{
+    display: inline-block;
+    padding: 5px 15px;
+    font-family: "raleway";
+    border: 1px solid #fff;
+    color: #fff;
+    font-weight:100;
+    transition: .1s;
+    cursor: pointer;
+    margin: 0 2px 8px;
+}
+.contNav li:hover{
+    background-color: #5e9bff;
+    color: #000;
+}
+#catMain{
+    padding:0 20px;
+}
 
 
 
 
 /* THE FOOTER */
 footer{
+    margin-top: 100px;
     margin-left: 63px;
     background-color: #000;
 }
