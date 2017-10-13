@@ -4,6 +4,7 @@
 body{
     margin: 0;
     background-color: #000;
+    overflow-X: hidden;
 }
 
 .col-1 {width: 8.33%;}
@@ -522,7 +523,7 @@ footer{
         display: none;
     }
     #overlayOpen{
-        display: block;
+        display: block !important;
     }
     #main{
         margin-left: 0;

@@ -46,7 +46,6 @@ function ovShow(){
     body.style.overflow="hidden";
     ovOpen.style.display="none";
 }
-
 ovClose.onclick=ovHide;
 ovOpen.onclick=ovShow;
 ovBack.onclick=ovHide;

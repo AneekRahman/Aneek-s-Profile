@@ -237,7 +237,11 @@ a{
 .backSlideShow{
     display: flex;
     height: 200px;
-    filter: brightness(.5);
+    filter: brightness(.9);
+    overflow: hidden;
+}
+.backSlideShow div{
+    width: 250px;
 }
 .backSlideShow img{
     width: 250px;
@@ -246,8 +250,8 @@ a{
     animation-duration: 100s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-    border-right: 20px solid #fff;
-    border-left: 20px solid #fff;
+    border-right: 15px solid #fff;
+    border-left: 15px solid #fff;
 }
 @keyframes slideShow{
     0%{transform: translateX(0)}
@@ -324,7 +328,7 @@ a{
     color: #fff;
     font-family: "raleway";
     padding: 5px 0;
-    font-weight: 100;
+    font-weight: 300;
     font-size: 13px
 }
 .contNav li{
@@ -333,13 +337,13 @@ a{
     font-family: "raleway";
     border: 1px solid #fff;
     color: #fff;
-    font-weight:100;
+    font-weight:300;
     transition: .1s;
     cursor: pointer;
     margin: 0 2px 8px;
 }
 .contNav li:hover{
-    background-color: #5e9bff;
+    background-color: #b7d2ff;
     color: #000;
 }
 #catMain{
