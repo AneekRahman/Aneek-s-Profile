@@ -39,7 +39,7 @@ a{
 #fixedNav nav{
     position: fixed;
     height: 100%;
-    background-color: #000;
+    background-image:linear-gradient(#0f0f16,#131321);
     z-index: 20;
     overflow: hidden;
     animation-name: navBarFade;
@@ -65,10 +65,11 @@ a{
     padding: 0;
     margin: 0;
     list-style: none;
+    width: 63px;
 }
 #fixedNav ul i,#overlayCont ul i{
     display: block;
-    font-size: 40px;
+    font-size: 30px;
     padding: 3px 0;
 }
 #fixedNav ul a,#overlayCont ul a{
@@ -79,7 +80,7 @@ a{
     transition: background-color .1s;
     cursor: pointer;
     display: block;
-    font-size: 13px;
+    font-size: 10px;
 }
 #fixedNav ul a:nth-child(1){
     text-shadow: 0 0 150px #fff;
@@ -293,7 +294,7 @@ a{
     color: #fff;
     background-image: linear-gradient(40deg,#0077ff,#00ffbb);
     padding: 10px 20px;
-    margin: 0 1vw;
+    margin: 0 1vw ;
     font-family: "varela round";
     display: inline-block;
     animation-name: pretty;
@@ -317,26 +318,10 @@ a{
     padding: 30px 10px;
     margin: 0;
     font-family: raleway;
-    font-size: 50px;
-    font-weight: 900;
-    animation-name: workh1;
-    animation-duration: 60s;
-    animation-iteration-count: infinite;
-    text-shadow: 0 0 5px #fff;
+    font-size: 30px;
+    font-weight: 300;
+    text-shadow: 0 0 5px grey;
     text-transform: uppercase;
-}
-@keyframes workh1{
-    0{color: #fff}
-    10%{color: #fc0000}
-    20%{color: #fcde00}
-    30%{color: #3fff00}
-    40%{color: #8300ff}
-    50%{color: #fa00ff}
-    60%{color: #ff0087}
-    70%{color: #0090ff}
-    80%{color: #00ff3b}
-    90%{color: #00faff}
-    100%{color: #000}
 }
 #howWork ol{
     padding: 0 3vw 7vw;
@@ -345,10 +330,10 @@ a{
 }
 #howWork ol li{
     padding: 14px 10px;
-    margin: 20px 0;
+    margin: 14px 10%;
     background-color: inherit;
     font-family: "varela round";
-    font-size: 24px;
+    font-size: 17px;
     overflow: hidden;
     color: #fff;
     text-align: center;
@@ -358,8 +343,9 @@ a{
     animation-fill-mode: forwards;
     transform: translateX(10vw);
     opacity: 0;
-    border: 7px solid #fff;
-    font-weight: 900;
+    border: 4px solid #6bd2ff;
+    font-weight: 600;
+    box-shadow: 3px 3px 9px #515151
 }
 @keyframes workSlide{
     from{transform: translateX(10vw);opacity: 0;}
@@ -383,8 +369,8 @@ a{
 #langs h1{
     margin: auto;
     font-family: raleway;
-    font-size: 50px;
-    font-weight: 500;
+    font-size: 30px;
+    font-weight: 300;
     padding: 40px 10px;
     text-transform: uppercase;
     color: #006dad;
@@ -413,32 +399,14 @@ a{
 .langWrap p{
     margin: auto;
     font-family: "varela round";
-    font-size: 40px;
+    font-size: 24px;
     color: #383838;
+    animation-name: fadeIn;
+    animation-duration: 4s;
 }
-#html,#css,#js{
-    animation: langDown;
-    animation-duration: 2s;
-    animation-timing-function: ease;
-    transform: translateY(-10vh);
-    animation-fill-mode: forwards;
-    opacity: 0;
-}
-@keyframes langDown{
-    0   {transform: translateY(-10vh);opacity: 0}
-    100%{transform: translateY(-0vh); opacity: 1}
-}
-#jq,#bs,#rwd{
-    animation: langUp;
-    animation-duration: 2s;
-    animation-timing-function: ease;
-    transform: translateY(10vh);
-    animation-fill-mode: forwards;
-    opacity: 0;
-}
-@keyframes langUp{
-    0   {transform: translateY(10vh);opacity: 0}
-    100%{transform: translateY(0vh); opacity: 1}
+@keyframes fadeIn{
+    from{opacity: 0;}
+    to{opacity: 1;}
 }
 .langWrap:hover{
     animation-name: langHov;
@@ -530,5 +498,8 @@ footer{
     }
     footer{
         margin-left: 0;
+    }
+    #fixedNav ul,#overlayCont ul{
+        width: 100%;
     }
 }

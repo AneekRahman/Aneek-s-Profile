@@ -37,7 +37,7 @@ a{
 #fixedNav nav{
     position: fixed;
     height: 100%;
-    background-color: #000;
+    background-color: #2b2b42;
     z-index: 20;
     overflow: hidden;
     animation-name: navBarFade;
@@ -63,10 +63,11 @@ a{
     padding: 0;
     margin: 0;
     list-style: none;
+    width: 63px;
 }
 #fixedNav ul i,#overlayCont ul i{
     display: block;
-    font-size: 40px;
+    font-size: 30px;
     padding: 3px 0;
 }
 #fixedNav ul a,#overlayCont ul a{
@@ -77,7 +78,7 @@ a{
     transition: background-color .1s;
     cursor: pointer;
     display: block;
-    font-size: 13px;
+    font-size: 10px;
 }
 #fixedNav ul a:nth-child(1){
     text-shadow: 0 0 150px #fff;
@@ -90,7 +91,7 @@ a{
     50%{text-shadow: 0 0 100px #fff;}
     100%{text-shadow: 0 0 300px #fff;}
 }
-#fixedNav ul a:nth-child(2),#overlayCont ul a:nth-child(2){
+#fixedNav ul a:nth-child(1),#overlayCont ul a:nth-child(1){
     background-color:#c600b3;
 }
 #fixedNav ul a:hover,#overlayCont ul a:hover{
@@ -437,5 +438,8 @@ footer{
     }
     footer{
         margin-left: 0;
+    }
+    #fixedNav ul,#overlayCont ul{
+        width: 100%;
     }
 }
